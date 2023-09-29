@@ -1,18 +1,21 @@
-# Projeto API Para Controle de Finanças
-
-## Como entregar?
-
-- [ ] Faça o fork desse repositório para o seu GitHub
-- [ ] Clone o seu repositório em sua máquina
-- [ ] Desenvolva seu projeto, fazendo commits a cada alteração e push
-- [ ] Crie um PR (pull request)
-- [ ] Envie o link do pull request que você criou na plataforma da Cubos
-
-### ⚠️ Importante: Se o pull request não for criado e enviado na plataforma o feedback não será fornecido e constará como não entregue
+#  🫰 Projeto API Para Controle de Finanças
 
 ## Descrição do Projeto
 
-Esta é uma API Rest de um Controlador de Finanças Pessoais com Criṕtografia e autenticação, desenvolvido com NodeJs, Express, banco de dados PostgreSQL e Insomnia para testar as rotas e funcionalidades:
+Esta é uma API Rest para uma aplicação de controle de finanças Pessoais com integração ao banco de dados, criptografia e autenticação de usuário, desenvolvida com NodeJs, Express, banco de dados PostgreSQL e Insomnia para testar as rotas e funcionalidades. 
+
+## Tecnologias utilizads neste projeto:
+<img alt="logo da linguagem Javascript" src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E"> <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" alt="Logo nodejs">
+<img src="https://img.shields.io/badge/Express.js-404D59?style=for-the-badge" alt="Logo express"> <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" alt="Logo posgtres">
+
+## Como utilizar, testar ou modificar?
+
+- [ ] Você pode baixar fazer o download deste repô para sua máquina ou ainda forkar ou clonar esse repositório para o seu GitHub
+- [ ] Dentro da pasta do projeto(em sua máquina) execute o comando "npm install" para instalar as dependências do projeto.
+- [ ] Dentro da pasta do projeto em (dump.sql) estão os comandos necessários para criação de uma banco de dados local.
+- [ ] Neste Readme estão as instruções para facilitar a criação deste banco de dados local.
+- [ ] Abaixo estão informações para facilitar o entendimento do projeto.
+- [ ] Se sinta livre para contribuir, testar e evoluir esse projeto!
 
 **Features:**
 - Cadastrar Usuário
@@ -29,7 +32,8 @@ Esta é uma API Rest de um Controlador de Finanças Pessoais com Criṕtografia 
 - [Extra] Filtrar transações por categoria
 
 **Algumas regras de negócio**
-**Cada usuário só pode ver e manipular seus próprios dados e suas próprias transações. Não atender a este pré-requisito é uma falha de segurança gravíssima!**
+
+**Cada usuário só pode ver e manipular seus próprios dados e suas próprias transações**
 
 **Sempre que a validação de uma requisição falhar, é respondida com código de erro e mensagem adequada à situação.**
 
@@ -69,8 +73,7 @@ Esta é uma API Rest de um Controlador de Finanças Pessoais com Criṕtografia 
     
 **ATENÇÃO! Os nomes das tabelas e das colunas a serem criados devem seguir exatamente os nomes listados abaixo.**
 
-
-## Também serão inseridas em seguida, as categorias para que sejam listadas no endpoint de listagem das categorias(já há o comando para isso no arquivo "dump.sql" bastando executá-lo).
+## Também devem ser inseridas em seguida, as categorias para que sejam listadas no endpoint de listagem das categorias(já há o comando para isso no arquivo "dump.sql" bastando executá-lo).
 
 ## **Categorias**
 
@@ -92,16 +95,16 @@ Esta é uma API Rest de um Controlador de Finanças Pessoais com Criṕtografia 
 - Outras receitas
 - Outras despesas
 
-## **Requisitos e infromações deste Banco de Dados**
+## **Requisitos e informações deste Banco de Dados**
 
 - A API acessará o banco de dados a ser criado "dindin" para persistir e manipular os dados de usuários, categorias e transações utilizados pela aplicação.
-- O campo `id` das tabelas no banco de dados é do tipo auto incremento, chave primária e não deve permite edição uma vez criado.
+- O campo `id` das tabelas no banco de dados é do tipo auto incremento, chave primária e não permite edição uma vez criado.
 - O código esta organizado, delimitando as responsabilidades de cada arquivo adequadamente.
 - Qualquer valor monetário é representado em centavos (Ex.: R$ 10,00 reais = 1000)
 
 ## **Status Codes**
 
-Abaixo, listamos os possíveis **_status codes_** esperados como resposta da API.
+Abaixo, estão os possíveis **_status codes_** esperados como resposta da API.
 
 ```javascript
 // 200 (OK) = requisição bem sucedida
@@ -232,8 +235,8 @@ Essa é a rota que permite o usuario cadastrado realizar o login no sistema.
 
 ## **ATENÇÃO**: Todas as funcionalidades (endpoints) a seguir, a partir desse ponto, exigirão o token de autenticação do usuário logado, recebendo no header com o formato Bearer Token. Portanto, em cada funcionalidade será necessário validar o token informado. 
 ## RECOMENDO O USO DO INSOMNIA (https://insomnia.rest/download) PARA FACILITAR OS TESTE. 
-## LENRE-SE DE ADICIONAR O PARÂMETRO DE BEARER TOKEN  e colar neste o token que é gerado na rota de login. 
-## COMO ASSIM, ADICINAR O PARÂMETRO?
+## LEMBRE-SE DE ADICIONAR O PARÂMETRO DE BEARER TOKEN  e colar neste o token que é gerado na rota de login. 
+## COMO ASSIM, ADICIONAR O PARÂMETRO?
    - Cada vez que há um log no sistema, é gerado um token que pode ser acessado no body de resposta da rota de login, para conferir a autenticação deste usuário.
 ---
 
@@ -310,7 +313,7 @@ Essa é a rota que será chamada quando o usuário quiser realizar alterações 
     - email
     - senha
   - Valida se o novo e-mail já existe no banco de dados para outro usuário
-    - Caso já exista o novo e-mail fornecido para outro usuário no banco de dados, a alteração não deve é permitida (o campo de email deve ser sempre único no banco de dados)
+    - Caso já exista o novo e-mail fornecido para outro usuário no banco de dados, a alteração não será permitida (o campo de email é único no banco de dados)
   - Criptografa a senha antes de salvar no banco de dados
   - Atualiza as informações do usuário no banco de dados
 
@@ -351,7 +354,7 @@ Essa é a rota que será chamada quando o usuario logado quiser listar todas as 
 
 - **Resposta**  
   Em caso de **sucesso**, o corpo (body) da resposta possui um array dos objetos (categorias) encontrados.  
-  Em caso de **falha na validação**, a resposta deverá possui **_status code_** apropriado, e em seu corpo (body) possui um objeto com uma propriedade **mensagem** que possui como valor um texto explicando o motivo da falha.
+  Em caso de **falha na validação**, a resposta possui **_status code_** apropriado, e em seu corpo (body) possui um objeto com uma propriedade **mensagem** que possui como valor um texto explicando o motivo da falha.
 
 - **REQUISITOS E VALIDAÇÕES**
   - O endpoint responde com um array de todas as categorias cadastradas.
@@ -389,7 +392,7 @@ Essa é a rota que será chamada quando o usuario logado quiser listar todas as 
 #### `GET` `/transacao`
 
 Essa é a rota que será chamada quando o usuario logado quiser listar todas as suas transações cadastradas.  
-Serão retornadas **apenas** transações associadas ao usuário logado, que deverá ser identificado através do ID presente no token de validação.
+Serão retornadas **apenas** transações associadas ao usuário logado, que será identificado através do ID presente no token de validação.
 
 - **Requisição**  
   Sem parâmetros de rota ou de query.  
@@ -496,7 +499,7 @@ Ser retornado **apenas** transação associada ao usuário logado, que será ide
 #### `POST` `/transacao`
 
 Essa é a rota que será utilizada para cadastrar uma transação associada ao usuário logado.  
-É possível cadastrar **apenas** transações associadas ao próprio usuário logado, que deverá será identificado através do ID presente no token de validação.
+É possível cadastrar **apenas** transações associadas ao próprio usuário logado, que será identificado através do ID presente no token de validação.
 
 - **Requisição**  
   Sem parâmetros de rota ou de query.  
@@ -564,7 +567,7 @@ Essa é a rota que será utilizada para cadastrar uma transação associada ao u
 #### `PUT` `/transacao/:id`
 
 Essa é a rota que será chamada quando o usuario logado quiser atualizar uma das suas transações cadastradas.  
-**Lembre-se:** Deverá ser possível atualizar **apenas** transações associadas ao próprio usuário logado, que deverá ser identificado através do ID presente no token de validação.
+É possível atualizar **apenas** transações associadas ao próprio usuário logado, que será identificado através do ID presente no token de validação.
 
 - **Requisição**  
   Deverá ser enviado o ID da transação no parâmetro de rota do endpoint.  
@@ -624,7 +627,7 @@ Essa é a rota que será chamada quando o usuario logado quiser atualizar uma da
 #### `DELETE` `/transacao/:id`
 
 Essa é a rota que será chamada quando o usuario logado quiser excluir uma das suas transações cadastradas.  
-É possível excluir **apenas** transações associadas ao próprio usuário logado, que deverá ser identificado através do ID presente no token de validação.
+É possível excluir **apenas** transações associadas ao próprio usuário logado, que será identificado através do ID presente no token de validação.
 
 - **Requisição**  
   Deverá ser enviado o ID da transação no parâmetro de rota do endpoint.  
@@ -664,7 +667,7 @@ Essa é a rota que será chamada quando o usuario logado quiser excluir uma das 
 #### `GET` `/transacao/extrato`
 
 Essa é a rota que será chamada quando o usuario logado quiser obter o extrato de todas as suas transações cadastradas.
-**Lembre-se:** Deverá ser possível consultar **apenas** transações associadas ao próprio usuário logado, que deverá ser identificado através do ID presente no token de validação.
+É possível atualizar **apenas** transações associadas ao próprio usuário logado, que será identificado através do ID presente no token de validação.
 
 - **Requisição**  
   Sem parâmetros de rota ou de query.  
@@ -697,4 +700,4 @@ Essa é a rota que será chamada quando o usuario logado quiser obter o extrato 
 
 ---
 
-###### tags: `back-end` `módulo 3` `nodeJS` `PostgreSQL` `API REST` 
+###### tags: `back-end` `nodeJS` `PostgreSQL` `API REST` 
