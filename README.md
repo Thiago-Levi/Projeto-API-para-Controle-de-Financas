@@ -11,7 +11,7 @@ Esta é uma API Rest para uma aplicação de controle de finanças Pessoais com 
 ## Como utilizar, testar ou modificar?
 
 - [ ] Você pode baixar fazer o download deste repô para sua máquina ou ainda forkar ou clonar esse repositório para o seu GitHub
-- [ ] Dentro da pasta do projeto(em sua máquina) execute o comando "npm install" para instalar as dependências do projeto.
+- [ ] Dentro da pasta do projeto(em sua máquina) execute o comando "npm install" para instalar as dependências("bcrypt", "express", "jsonwebtoken", "pg" e "nodemon") do projeto.
 - [ ] Dentro da pasta do projeto em (dump.sql) estão os comandos necessários para criação de uma banco de dados local.
 - [ ] Neste Readme estão as instruções para facilitar a criação deste banco de dados local.
 - [ ] Abaixo estão informações para facilitar o entendimento do projeto.
