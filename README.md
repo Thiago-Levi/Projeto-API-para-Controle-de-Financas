@@ -1,4 +1,4 @@
-# Projeto API Para Controle de Finaças
+# Projeto API Para Controle de Finanças
 
 ## Como entregar?
 
