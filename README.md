@@ -15,6 +15,7 @@ Esta é uma API Rest para uma aplicação de controle de finanças Pessoais com 
 - [ ] Dentro da pasta do projeto em (dump.sql) estão os comandos necessários para criação de uma banco de dados local.
 - [ ] Neste Readme estão as instruções para facilitar a criação deste banco de dados local.
 - [ ] Abaixo estão informações para facilitar o entendimento do projeto.
+- [ ] Você pode usar/testar as rotas pelo Insomnia(por exemplo)
 - [ ] Se sinta livre para contribuir, testar e evoluir esse projeto!
 
 **Features:**
