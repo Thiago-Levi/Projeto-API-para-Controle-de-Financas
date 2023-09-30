@@ -51,7 +51,8 @@ Esta é uma API Rest para uma aplicação de controle de finanças Pessoais com 
 - Para testar esta API, você precisa criar um Banco de dados local conforme os passos abaixo:
    - Copiar o código que está no arquivo "dump.sql".
    - Colar e executá-lo em um editor/gerenciador SQL de sua preferência (recomendo o Beekeeper Studio: https://www.beekeeperstudio.io) para criar um Banco de Dados PostgreSQL chamado `dindin`.
-   - Seŕa criado um Banco de dados contendo as seguintes tabelas e colunas abaixo:
+   - Será criado um Banco de dados contendo as seguintes tabelas e colunas abaixo:
+   - A conexão entre o banco e as rotas já está implementada, não se preocupe. 
        
 - usuarios
   - id
