@@ -29,7 +29,6 @@ Esta é uma API Rest para uma aplicação de controle de finanças Pessoais com 
 - Editar transação
 - Remover transação
 - Obter extrato de transações
-- [Extra] Filtrar transações por categoria
 
 **Algumas regras de negócio**
 
